@@ -1,23 +1,19 @@
-import Container from "react-bootstrap/Container"
-import Row from "react-bootstrap/Row"
-import Col from "react-bootstrap/Col"
-import { AddModal } from "./AddModal"
-import { useState } from "react"
+import Container from "react-bootstrap/Container";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import { AddModal } from "./AddModal";
+import { useState } from "react";
 
 const Doctors = ({ doctors, appointments, setAppointments }) => {
-  const [show, setShow] = useState(false)
-  const [selectedDrName, setSelectedDrName] = useState("")
-
-  // const handleClose = () => setShow(false)
-  // const handleShow = () => setShow(true)
+  const [show, setShow] = useState(false);
+  const [selectedDrName, setSelectedDrName] = useState("");
 
   const handleClick = (drName) => {
-    // handleShow()
-    setShow(true)
-    setSelectedDrName(drName)
-  }
+    setShow(true);
+    setSelectedDrName(drName);
+  };
 
-  console.log(selectedDrName)
+  console.log(selectedDrName);
   return (
     <Container className="p-2">
       <h3 className="display-6 mb-3" style={{ color: "rgb(166, 18, 189)" }}>
@@ -38,7 +34,6 @@ const Doctors = ({ doctors, appointments, setAppointments }) => {
           </Col>
         ))}
       </Row>
-      {/* <AddModal show={show} handleClose={handleClose} /> */}
       <AddModal
         show={show}
         handleClose={() => setShow(false)}
@@ -47,7 +42,7 @@ const Doctors = ({ doctors, appointments, setAppointments }) => {
         setAppointments={setAppointments}
       />
     </Container>
-  )
-}
+  );
+};
 
-export default Doctors
+export default Doctors;
