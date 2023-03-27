@@ -1,7 +1,7 @@
-import React, { useState } from "react"
-import Modal from "react-bootstrap/Modal"
-import Button from "react-bootstrap/Button"
-import Form from "react-bootstrap/Form"
+import React, { useState } from "react";
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 
 export function AddModal({
   show,
@@ -10,11 +10,11 @@ export function AddModal({
   appointments,
   setAppointments,
 }) {
-  const [patientName, setPatientName] = useState("")
-  const [date, setDate] = useState("")
+  const [patientName, setPatientName] = useState("");
+  const [date, setDate] = useState("");
 
   const handleSubmit = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     setAppointments([
       ...appointments,
       {
@@ -24,11 +24,11 @@ export function AddModal({
         consulted: false,
         doctor: drName,
       },
-    ])
-    handleClose()
-  }
+    ]);
+    handleClose();
+  };
 
-  console.log(appointments)
+  console.log(appointments);
   return (
     <>
       <Modal show={show} onHide={handleClose}>
@@ -66,5 +66,5 @@ export function AddModal({
         </Modal.Body>
       </Modal>
     </>
-  )
+  );
 }

@@ -32,7 +32,7 @@ const AppointmentList = ({ appointments, setAppointments }) => {
             <div
               key={id}
               className={consulted ? "appointments consulted" : "appointments "}
-              onClick={() => handleDoubleClick(id)}
+              onDoubleClick={() => handleDoubleClick(id)}
             >
               <Row className="justify-content-center align-items-center g-3">
                 <Col xs={12} sm={12} md={6}>
